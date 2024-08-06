@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %} {{album}} {% endblock title %}
+{% block content %}
+<h2>{{album}}</h2>
+    <p>Has elegido el álbum: <strong>{{ album | capfirst }}</strong></p>
+    <h3>Información:</h3>
+    <ul>
+        <li>Año de lanzamineto: {{ album.release_year }}.</li>
+        <li>Género: {{ album.genre }}.</li>
+        <li>Artista: {{ album.artist }}.</li>
+    </ul>
+    <a href="/">Regresar</a>
+{% endblock content %}
