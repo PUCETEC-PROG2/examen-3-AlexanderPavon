@@ -15,15 +15,16 @@
                         <p class="card-text">Nombre: {{ artist.name }}.</p>
                         <p class="card-text">País de Origen: {{ artist.country }}.</p>
 
-                        <a href="artist/{{ artist.id }}" class="btn btn-primary">
+                        <a href="{% url 'album_manager:artist' artist.id %}" class="btn btn-primary">
                             <i class="fa-solid fa-eye"></i>
                         </a>
-                        <a href="edit_artist/{{ artist.id }}" class="btn btn-primary">
+                        <a href="{% url 'album_manager:edit_artist' artist.id %}" class="btn btn-primary">
                             <i class="fa-solid fa-pencil"></i>
                         </a>
-                        <a href="delete_artist/{{ artist.id }}" class="btn btn-danger">
+                        <a href="{% url 'album_manager:delete_artist' artist.id %}" class="btn btn-danger">
                             <i class="fa-solid fa-trash"></i>
                         </a>
+                        
                     </div>
                 </div>
             </div>

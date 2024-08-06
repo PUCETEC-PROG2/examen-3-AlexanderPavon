@@ -11,15 +11,15 @@
                     <p class="class-text">Artista: {{ album.artist }}</p>
                     <p class="class-text">Género: {{ album.genre }}</p>
                 
-                    <a href="album/{{ album.id }}" class="btn btn-primary">
+                    <a href="{% url 'album_manager:album' album.id %}" class="btn btn-primary">
                         <i class="fa-solid fa-eye"></i>
                     </a>
-                    <a href="edit_album/{{ album.id }}" class="btn btn-primary">
+                    <a href="{% url 'album_manager:edit_album' album.id %}" class="btn btn-primary">
                         <i class="fa-solid fa-pencil"></i>
                     </a>
-                    <a href="delete_album/{{ album.id }}" class="btn btn-danger">
+                    <a href="{% url 'album_manager:delete_album' album.id %}" class="btn btn-danger">
                         <i class="fa-solid fa-trash"></i>
-                    </a>
+                    </a>                    
                 </div>
             </div>
         {% endfor %}    
